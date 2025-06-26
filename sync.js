@@ -6,8 +6,8 @@ async function sincronizarBanco() {
     await sequelize.sync({ force: true }); // Cria as tabelas
     console.log('Banco sincronizado com sucesso!');
   } catch (error) {
-    console.error('Erro ao sincronizar o banco:', error);
+    console.error('Erro ao sincronizar banco:', error);
   }
 }
 
-sincronizarBanco();
+module.exports = {sincronizarBanco};

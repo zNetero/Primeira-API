@@ -1,13 +1,13 @@
 const Usuario = require('./Usuario');
 
+
 async function lerUsuarios(){
     try{
-        const usuario = await Usuario.findAll()
-        console.log(usuario);
+        return await Usuario.findAll();
     }
     catch(erro){
         console.error('Erro ao ler usuários:',erro);
     }
 }
 
-lerUsuarios();
+module.exports = {lerUsuarios};
